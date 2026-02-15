@@ -1,23 +1,18 @@
-
-
 {
-    "manifest_version": 3,
-    "name": "youmble",
-    "version": "1.0",
-    "description": "A chrome extension, whoch makes you gigle",
-    "permissions": ["activeTab", "scripting", "tabs", "storage", "alarms"],
-    "action": { "default_popup": "popup.html" },
-    "content_scripts": [
-        {
-            "matches": ["youtube.com"],
-            "js": ["content.js"],
-            "run_at": ["document_idle"]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": ["popup.css", "styles.css"],
-            "matches": ["<all_urls>"]
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Youmble",
+  "version": "1.0",
+  "description": "Changes random YouTube thumbnails, titles, and icons to randomthumbnails, randomtitles, and randomicons.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["replacement.jpg"],
+      "matches": ["*://*.youtube.com/*"]
+    }
+  ]
 }

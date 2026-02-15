@@ -1,0 +1,13 @@
+body {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;  
+    box-sizing: border-box; 
+    border: 2px solid rgb(2, 14, 176);
+    border-radius: 5px;
+}
